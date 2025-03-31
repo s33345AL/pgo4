@@ -5,41 +5,34 @@ public class Klient {
     private String email;
     private boolean czyStaly;
 
-    public Klient() {
-        this.id = id;
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.email = email;
-        this.czyStaly = czyStaly;
+    int getId(){
+        return this.id;
     }
-    public void setId(int id) {
+    void setId(int id){
         this.id = id;
     }
-    public int getId() {
-        return id;
+    String getImie(){
+        return this.imie;
     }
-    public void setImie(String imie) {
+    void setImie(String imie){
         this.imie = imie;
     }
-    public String getImie() {
-        return imie;
+    String getNazwisko(){
+        return this.nazwisko;
     }
-    public void setNazwisko(String nazwisko) {
+    void setNazwisko(String nazwisko){
         this.nazwisko = nazwisko;
     }
-    public String getNazwisko() {
-        return nazwisko;
+    String getEmail(){
+        return this.email;
     }
-    public void setEmail(String email) {
+    void setEmail(String email){
         this.email = email;
     }
-    public String getEmail() {
-        return email;
+    boolean isCzyStaly(){
+        return this.czyStaly;
     }
-    public void setCzyStaly(boolean czyStaly) {
+    void setCzyStaly(boolean czyStaly){
         this.czyStaly = czyStaly;
-    }
-    public boolean getCzyStaly() {
-        return czyStaly;
     }
 }

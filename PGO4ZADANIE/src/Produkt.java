@@ -5,42 +5,35 @@ public class Produkt {
     private double cena;
     private int iloscWMagazynie;
 
-    public Produkt() {
+    int getId(){
+        return this.id;
+    }
+    void setId(int id){
         this.id = id;
-        this.nazwa = nazwa;
-        this.kategoria = kategoria;
-        this.cena = cena;
-        this.iloscWMagazynie = iloscWMagazynie;
+    }
 
+    String getNazwa(){
+        return this.nazwa;
     }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public int getId() {
-        return id;
-    }
-    public void setNazwa(String nazwa) {
+    void setNazwa(String nazwa){
         this.nazwa = nazwa;
     }
-    public String getNazwa() {
-        return nazwa;
+    String getKategoria(){
+        return this.kategoria;
     }
-    public void setKategoria(String kategoria) {
+    void setKategoria(String kategoria){
         this.kategoria = kategoria;
     }
-    public String getKategoria() {
-        return kategoria;
+    double getCena(){
+        return this.cena;
     }
-    public void setCena(double cena) {
+    void setCena(double cena){
         this.cena = cena;
     }
-    public double getCena() {
-        return cena;
+    int getIloscWMagazynie(){
+        return this.iloscWMagazynie;
     }
-    public void setIloscWMagazynie(int iloscWMagazyne) {
+    void setIloscWMagazynie(int iloscWMagazynie){
         this.iloscWMagazynie = iloscWMagazynie;
-    }
-    public int getIloscWMagazynie() {
-        return iloscWMagazynie;
     }
 }

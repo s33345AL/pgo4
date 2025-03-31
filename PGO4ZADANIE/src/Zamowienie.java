@@ -16,40 +16,54 @@ public class Zamowienie {
         this.dataZamowienia = dataZamowienia;
         this.status = status;
     }
-    public void setId(int id){
+    void setId(int id){
         this.id = id;
     }
-    public int getId(){
-        return id;
+    int getId(){
+        return this.id;
     }
-    public void setKlient(Klient klient){
+    void setKlient(Klient klient){
         this.klient = klient;
     }
-    public Klient getKlient(){
-        return klient;
+    Klient getKlient(){
+        return this.klient;
     }
-    public void setProdukty(Produkt[] produkty){
+    void setProdukty(Produkt[] produkty){
         this.produkty = produkty;
     }
-    public Produkt[] getProdukty(){
-        return produkty;
+    Produkt[] getProdukty(){
+        return this.produkty;
     }
-    public void setIlosci(int[] ilosci){
+    void setIlosci(int[] ilosci){
         this.ilosci = ilosci;
     }
-    public int[] getIlosci(){
-        return ilosci;
+    int[] getIlosci(){
+        return this.ilosci;
     }
     public void setDataZamowienia(String dataZamowienia){
         this.dataZamowienia = dataZamowienia;
     }
     public String getDataZamowienia(){
-        return dataZamowienia;
+        return this.dataZamowienia;
     }
     public void setStatus(String status){
         this.status = status;
     }
     public String getStatus(){
         return status;
+    }
+
+    public double obliczWartoscZamowienia() {
+        double cena = 20.0;
+        return cena;
+    }
+
+    public void zastosujZnizke() {
+        double cena2 = 0.0;
+        if(klient.isCzyStaly()){
+            cena2 = obliczWartoscZamowienia() - (0.1 * obliczWartoscZamowienia());
+        }else{
+            cena2 = obliczWartoscZamowienia();
+        }
     }
 }
