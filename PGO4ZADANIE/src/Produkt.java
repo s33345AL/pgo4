@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Produkt {
     private int id;
     private String nazwa;
@@ -36,4 +39,9 @@ public class Produkt {
     void setIloscWMagazynie(int iloscWMagazynie){
         this.iloscWMagazynie = iloscWMagazynie;
     }
+
+    public void wyswietlInformacje(){
+        System.out.println("Identyfikator: " + this.id + "Nazwa produktu: " + this.nazwa + "Kategoria: " + this.kategoria + "Cena: " + this.cena + "IloscWMagazynie: " + this.iloscWMagazynie);
+    }
+
 }

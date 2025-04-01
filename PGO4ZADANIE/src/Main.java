@@ -21,9 +21,9 @@ public class Main {
         produkt3.setKategoria("Monitor");
         produkt3.setCena(1299.99);
         produkt3.setIloscWMagazynie(15);
-                //sklep.dodajProdukt(produkt1);
-                //sklep.dodajProdukt(produkt2);
-                //sklep.dodajProdukt(produkt3);
+                sklep.dodajProdukt(produkt1);
+                sklep.dodajProdukt(produkt2);
+                sklep.dodajProdukt(produkt3);
 // Dodajemy klientów
                 Klient klient1 = new Klient();
                 klient1.setId(1);
@@ -46,7 +46,7 @@ public class Main {
                 zamowienie1.zastosujZnizke(); // Zastosuj zniżkę dla stałego klienta
                 sklep.aktualizujStanMagazynowy(zamowienie1);
 // Wyświetlamy informacje
-                /*System.out.println("Informacje o zamówieniu:");
+                System.out.println("Informacje o zamówieniu:");
                 zamowienie1.wyswietlSzczegoly();
                 System.out.println("\nStan magazynowy po zamówieniu:");
                 sklep.wyswietlProduktyWKategorii("Laptop");
@@ -62,7 +62,7 @@ public class Main {
                 sklep.aktualizujStanMagazynowy(zamowienie2);
 // Wyświetlanie zamówień klienta
                 System.out.println("\nZamówienia klienta Jan Kowalski:");
-                sklep.wyswietlZamowieniaKlienta(1);*/
+                sklep.wyswietlZamowieniaKlienta(1);
             }
     }
 

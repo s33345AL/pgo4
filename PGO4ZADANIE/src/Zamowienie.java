@@ -40,30 +40,45 @@ public class Zamowienie {
     int[] getIlosci(){
         return this.ilosci;
     }
-    public void setDataZamowienia(String dataZamowienia){
+    void setDataZamowienia(String dataZamowienia){
         this.dataZamowienia = dataZamowienia;
     }
-    public String getDataZamowienia(){
+    String getDataZamowienia(){
         return this.dataZamowienia;
     }
-    public void setStatus(String status){
+    void setStatus(String status){
         this.status = status;
     }
-    public String getStatus(){
+    String getStatus(){
         return status;
     }
 
     public double obliczWartoscZamowienia() {
-        double cena = 20.0;
-        return cena;
+        double suma = 0;
+        for(int i = 0; i < produkty.length; i++ ){
+            suma += produkty[i].getCena() * ilosci[i];
+        }
+        return suma;
     }
 
     public void zastosujZnizke() {
-        double cena2 = 0.0;
+        double znizka = 0.0;
         if(klient.isCzyStaly()){
-            cena2 = obliczWartoscZamowienia() - (0.1 * obliczWartoscZamowienia());
-        }else{
-            cena2 = obliczWartoscZamowienia();
+            znizka = obliczWartoscZamowienia() - (0.1 * obliczWartoscZamowienia());
         }
+        System.out.println(znizka);
+    }
+
+
+    public void wyswietlSzczegoly(){
+        System.out.println("Identyfikator: " + id);
+        System.out.println("Klient: " + klient.getImie() + " " + klient.getNazwisko());
+        System.out.println("Data: " + dataZamowienia);
+        System.out.println("Status: " + status);
+        System.out.println("Produkty: ");
+        for(int i = 0; i < produkty.length; i++ ){
+            System.out.println(produkty[i].getNazwa() + " " + ilosci[i] + " " + produkty[i].getCena());
+        }
+        System.out.println("Wartość całego zamówienia: " + obliczWartoscZamowienia() + " zł");
     }
 }

@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Klient {
     private int id;
     private String imie;
@@ -35,4 +38,9 @@ public class Klient {
     void setCzyStaly(boolean czyStaly){
         this.czyStaly = czyStaly;
     }
+
+    public void wyswietlInformacje(){
+        System.out.println(id + " " + imie + " " + nazwisko + " " + email + " " + czyStaly);
+    }
+
 }
